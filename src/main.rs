@@ -17,7 +17,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let city = env::args()
         .nth(1)
         .unwrap_or_else(|| "London".to_string());
-    let api_key = env::var("e4f98a77389bbad287b126c92fd74df4").expect("e4f98a77389bbad287b126c92fd74df4 not set");
+    let api_key = env::var("YOUR_API_KEY").expect("YOUR_API_KEY not set");
 
     let url = format!(
         "https://api.openweathermap.org/data/2.5/air_pollution?appid={}&q={}",
